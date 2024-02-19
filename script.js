@@ -12,7 +12,7 @@ const port = 5000;
 
 async function connectDB() {
   try {
-    url="mongodb://127.0.0.1/TestDB"
+    url="mongodb+srv://gigeconom:econ_123@cluster0.2rcqptj.mongodb.net/?retryWrites=true&w=majority"
     await mongoose.connect(url, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
