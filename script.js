@@ -42,7 +42,9 @@ const User = mongoose.model('User', userSchema);
 // Middleware
 app.use(express.json());
 app.use(cors());
-
+app.get('/',(req,res)=>{
+  res.send("hello Purna Chandu");
+})
 // Signup endpoint
 app.post('/signup', async (req, res) => {
   try {
