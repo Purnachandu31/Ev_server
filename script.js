@@ -5,6 +5,7 @@ const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const nodemailer = require('nodemailer');
 const crypto = require('crypto'); // Import the crypto module
+require('dotenv').config();
 
 // Initialize Express app
 const app = express();
@@ -12,7 +13,7 @@ const port = 5000;
 
 async function connectDB() {
   try {
-    url="mongodb+srv://gigeconom:econ_123@cluster0.2rcqptj.mongodb.net/?retryWrites=true&w=majority"
+    url=process.env.MONGODB_URI
     await mongoose.connect(url, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
